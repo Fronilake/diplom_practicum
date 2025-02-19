@@ -9,7 +9,6 @@ def post_new_order_token():
     order_response = sender_stand_request.post_new_order(data.order_body)
     return order_response
 
-track = post_new_order_token() # Сохранение токена в переменную
 
 # Функция позитивной проверки
 def positive_assert(new_order_token):
@@ -19,4 +18,5 @@ def positive_assert(new_order_token):
 
 
 def test_create_track_and_view_order():
+    track = post_new_order_token() #  Сохранение токена в переменную
     positive_assert(track)
